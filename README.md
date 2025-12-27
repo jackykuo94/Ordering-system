@@ -7,6 +7,8 @@
 
 ## 二、整體系統分層架構（宏觀）
 
+<img width="381" height="679" alt="螢幕擷取畫面 2025-12-28 005556" src="https://github.com/user-attachments/assets/d123ef49-6ea8-4d45-8446-c176591dee1a" />
+
 分層總覽
 
 Presentation Layer（表示層 / API層）
@@ -99,6 +101,8 @@ UML（應用層）
 
 核心概念
 
+<img width="368" height="288" alt="螢幕擷取畫面 2025-12-28 005617" src="https://github.com/user-attachments/assets/a8702151-98ca-44bd-b495-1e41aee125d8" />
+
 📌 附註：
 
 Order 是 Aggregate Root
@@ -128,6 +132,10 @@ UML（基礎設施層）
 📌 附註：Domain 只依賴 Repository 介面，不依賴資料庫。
 
 5️⃣ 外部系統整合（External Services）
+
+下單流程與金流概念圖:
+<img width="143" height="413" alt="螢幕擷取畫面 2025-12-28 005621" src="https://github.com/user-attachments/assets/a17a6a2f-b0c3-4e40-acb3-38a1d2c6f645" />
+<img width="189" height="188" alt="螢幕擷取畫面 2025-12-28 005627" src="https://github.com/user-attachments/assets/073d8cb0-d6b8-41f2-bfb6-c67fa44f7077" />
 
 可能整合項目
 
