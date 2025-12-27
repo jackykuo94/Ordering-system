@@ -61,19 +61,6 @@ Response DTO
 
 UML（表示層）
 
-@startuml
-class OrderController {
-  +createOrder(req)
-  +getOrder(id)
-}
-
-class OrderRequestDTO
-class OrderResponseDTO
-
-OrderController --> OrderRequestDTO
-OrderController --> OrderResponseDTO
-@enduml
-
 📌 附註：Controller 不知道訂單怎麼計價，只知道「要交給 Application 層處理」。
 
 2️⃣ Application Layer（應用層）
@@ -98,19 +85,6 @@ Domain Event Publisher
 
 UML（應用層）
 
-@startuml
-class OrderApplicationService {
-  +placeOrder(cmd)
-  +cancelOrder(orderId)
-}
-
-class PlaceOrderCommand
-class OrderPlacedEvent
-
-OrderApplicationService --> PlaceOrderCommand
-OrderApplicationService --> OrderPlacedEvent
-@enduml
-
 📌 附註：Application Service 是「流程導演」，但不是「演員」。
 
 3️⃣ Domain Layer（領域層，系統核心）
@@ -124,41 +98,6 @@ OrderApplicationService --> OrderPlacedEvent
 封裝複雜行為
 
 核心概念
-
-Entity：Order、User、Restaurant
-
-Value Object：Money、Address
-
-Aggregate Root：Order
-
-Domain Service：PricingService
-
-Domain Event：OrderPaid、OrderCancelled
-
-UML（領域模型）
-
-@startuml
-class Order {
-  -id
-  -status
-  -items
-  +pay()
-  +cancel()
-}
-
-class OrderItem {
-  -price
-  -quantity
-}
-
-class Money {
-  -amount
-  -currency
-}
-
-Order "1" o-- "*" OrderItem
-OrderItem --> Money
-@enduml
 
 📌 附註：
 
@@ -186,19 +125,6 @@ Message Queue Adapter
 
 UML（基礎設施層）
 
-@startuml
-interface OrderRepository {
-  +save(order)
-  +findById(id)
-}
-
-class OrderRepositoryImpl
-class MySQLDatabase
-
-OrderRepository <|.. OrderRepositoryImpl
-OrderRepositoryImpl --> MySQLDatabase
-@enduml
-
 📌 附註：Domain 只依賴 Repository 介面，不依賴資料庫。
 
 5️⃣ 外部系統整合（External Services）
@@ -213,28 +139,10 @@ OrderRepositoryImpl --> MySQLDatabase
 
 UML（外部整合）
 
-@startuml
-class PaymentServiceAdapter {
-  +pay(order)
-}
-
-class ThirdPartyPaymentAPI
-
-PaymentServiceAdapter --> ThirdPartyPaymentAPI
-@enduml
-
 📌 附註：使用 Adapter Pattern，避免第三方污染核心系統。
 
 ## 四、完整系統 UML 總覽（整合）
-
-@startuml
-Client --> OrderController
-OrderController --> OrderApplicationService
-OrderApplicationService --> Order
-OrderApplicationService --> OrderRepository
-OrderRepository --> Database
-OrderApplicationService --> PaymentServiceAdapter
-@enduml
+<img width="950" height="420" alt="order_system_architecture" src="https://github.com/user-attachments/assets/df09b8c3-c03a-4004-8bbf-a5ae3f6682ae" />
 
 ## 五、設計優點總結
 
