@@ -1,11 +1,11 @@
-#訂餐系統設計與實現
-##11224227郭秉恆、11224211李崇勛
+# 訂餐系統設計與實現
+## 11224227郭秉恆、11224211李崇勛
 
-##一、系統設計目標與核心理念
+## 一、系統設計目標與核心理念
 
 本訂餐系統以 高可擴充性、可維護性、分層解耦、真實商業情境 為設計核心，模擬實際外送平台或餐廳訂餐系統的後端架構。系統採用 分層架構（Layered Architecture） 並結合 DDD（Domain-Driven Design） 與 事件導向（Event-driven） 的思想，確保系統能應付高併發、功能演進與商業規則複雜化。
 
-##二、整體系統分層架構（宏觀）
+## 二、整體系統分層架構（宏觀）
 
 分層總覽
 
@@ -31,7 +31,7 @@ Repository / Infrastructure
   ↓
 Database / External Service
 
-##三、各層詳細設計說明
+## 三、各層詳細設計說明
 
 1️⃣ Presentation Layer（表示層）
 
@@ -225,7 +225,7 @@ PaymentServiceAdapter --> ThirdPartyPaymentAPI
 
 📌 附註：使用 Adapter Pattern，避免第三方污染核心系統。
 
-##四、完整系統 UML 總覽（整合）
+## 四、完整系統 UML 總覽（整合）
 
 @startuml
 Client --> OrderController
@@ -236,7 +236,7 @@ OrderRepository --> Database
 OrderApplicationService --> PaymentServiceAdapter
 @enduml
 
-##五、設計優點總結
+## 五、設計優點總結
 
 ✅ 高內聚、低耦合
 
@@ -248,7 +248,7 @@ OrderApplicationService --> PaymentServiceAdapter
 
 ✅ 可演進為微服務架構
 
-##六、可延伸進階主題（可再深化）
+## 六、可延伸進階主題（可再深化）
 
 CQRS + Event Sourcing
 
