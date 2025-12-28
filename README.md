@@ -231,7 +231,6 @@ JSON 作為資料交換格式
 API 與內部 Domain 完全解耦
 
 <img width="1500" height="950" alt="order_domain_p2p" src="https://github.com/user-attachments/assets/6f990fbd-86f7-4b14-aa3a-0ae0358b97bc" />
-<img width="1500" height="950" alt="payment_p2p" src="https://github.com/user-attachments/assets/0c4a5ed3-e911-4b78-a50b-5b64b966c169" />
 
 <img width="1500" height="950" alt="place_order_p2p" src="https://github.com/user-attachments/assets/971ca3bc-0a10-4d06-8df7-8c7d249bb873" />
 
