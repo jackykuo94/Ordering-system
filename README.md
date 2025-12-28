@@ -273,7 +273,7 @@ Event 驗證狀態轉換
 模擬金流服務
 CI/CD 自動化測試
 
-## 六、可延伸進階主題
+## 可延伸進階主題
 
 CQRS + Event Sourcing
 微服務拆分（Order / Payment / Delivery）
