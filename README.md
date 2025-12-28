@@ -9,32 +9,14 @@
 ## 二、整體系統分層架構
 
 <img width="1200" height="900" alt="order_system_architecture (1)" src="https://github.com/user-attachments/assets/59c2bbd9-52fe-438d-a21c-326ebd1137d6" />
-<img width="900" height="600" alt="01_concept_architecture" src="https://github.com/user-attachments/assets/51103654-2507-4ab3-937d-2fa1d01291ca" />
-
 
 分層總覽
 
 Presentation Layer（表示層 / API層）
-
 Application Layer（應用層）
-
 Domain Layer（領域層 / 商業核心）
-
 Infrastructure Layer（基礎設施層）
-
 External Services（外部系統）
-
-Client
-  ↓
-API / Controller
-  ↓
-Application Service
-  ↓
-Domain Model
-  ↓
-Repository / Infrastructure
-  ↓
-Database / External Service
 
 <img width="381" height="679" alt="螢幕擷取畫面 2025-12-28 005556" src="https://github.com/user-attachments/assets/d123ef49-6ea8-4d45-8446-c176591dee1a" />
 
@@ -238,17 +220,7 @@ API 與內部 Domain 完全解耦
 1. 系統架構總覽
 
 系統採用 分層式架構：
-Client
- ↓
-Presentation Layer
- ↓
-Application Layer
- ↓
-Domain Layer
- ↓
-Infrastructure Layer
- ↓
-Database / External Services
+<img width="900" height="600" alt="01_concept_architecture" src="https://github.com/user-attachments/assets/51103654-2507-4ab3-937d-2fa1d01291ca" />
 
 2. 模組劃分
 
