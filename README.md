@@ -8,8 +8,8 @@
 
 ## 二、整體系統分層架構
 
-<img width<img width="1200" height="900" alt="order_system_architecture (1)" src="https://github.com/user-attachments/assets/59c2bbd9-52fe-438d-a21c-326ebd1137d6" />
-="900" height="600" alt="01_concept_architecture" src="https://github.com/user-attachments/assets/51103654-2507-4ab3-937d-2fa1d01291ca" />
+<img width="1200" height="900" alt="order_system_architecture (1)" src="https://github.com/user-attachments/assets/59c2bbd9-52fe-438d-a21c-326ebd1137d6" />
+<img width="900" height="600" alt="01_concept_architecture" src="https://github.com/user-attachments/assets/51103654-2507-4ab3-937d-2fa1d01291ca" />
 
 
 分層總覽
